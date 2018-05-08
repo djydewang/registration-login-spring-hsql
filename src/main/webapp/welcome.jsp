@@ -32,7 +32,10 @@
         </form>
 
         <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
-
+        <br>
+        <c:forEach items="${sessions}" var="session">
+            ${session.id} ${session.creationTime} ${session.lastAccessedTime}
+        </c:forEach>>
     </c:if>
 
 </div>
